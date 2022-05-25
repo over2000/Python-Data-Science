@@ -104,10 +104,16 @@ vendasHotmart.head()
 vendasHotmart['product.name'].unique()
 # %%
 vendasHotmart.dtypes
-
-#%%
-Total = vendasHotmart['purchase.price.value'].sum()
 # %%
-Total
+list(vendasHotmart['product.name'].drop_duplicates())
 # %%
-new = vendasHotmart['product.name'] == '[Comida do Futuro] Combo #1'
+produto = ['Ebook Comida do Futuro']
+# %%
+selecao = vendasHotmart['product.name'].isin(produto)
+# %%
+dados_comida_futuro = vendasHotmart[selecao]
+# %%
+dados_comida_futuro['purchase.price.value'].sum()
+# %%
+dados_comida_futuro
+# %%
