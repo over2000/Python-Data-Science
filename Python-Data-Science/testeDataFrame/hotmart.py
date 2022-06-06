@@ -99,7 +99,7 @@ for x in range(6):
 vendasHotmart = json_normalize(vendas)
 
 # %%
-vendasHotmart.head()
+vendasHotmart
 # %%
 vendasHotmart['product.name'].unique()
 # %%

@@ -35,7 +35,7 @@ dados_residencial.index = range(dados_residencial.shape[0])
 dados_residencial
 
 #%%
-
+dados_residencial.to_csv('aluguel_residencial.csv', sep=';', index = False)
 
 
 
